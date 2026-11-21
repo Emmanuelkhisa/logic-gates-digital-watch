@@ -161,21 +161,19 @@ Block availability and dashboard appearance can vary by MATLAB/Simulink release.
 
 1. Install and activate a compatible MATLAB and Simulink release.
 2. Clone or download this repository.
-3. Copy your final model file, `DIGITAL_WATCH_STAGE9.slx`, into the `models/` directory. The model file is not included in this documentation bundle; add the final `.slx` file from your own working directory before publishing the repository as a runnable project.
+3. Copy your model files, into the `models/` directory. The model file is included in this documentation bundle.
 4. Open MATLAB and set the repository folder as the current working directory.
 5. Open `models/DIGITAL_WATCH_STAGE9.slx`.
 6. Run the model. Use Simulation Pacing when you want to observe the digits changing in real time. Turn pacing off when you want to run long-duration verification tests quickly.
 
 The two SVG files in `assets/` are the horizontal and vertical rectangular segment artwork used for the customized Dashboard Lamp appearance. If the model references SVG files by absolute path, update those references to the repository's `assets/` directory or reselect the corresponding files in the Lamp design settings.
 
-## Suggested repository layout
+## Repository layout
 
 ```text
-simulink-digital-watch/
+logic-gates-digital-watch/
 ├── README.md
-├── LICENSE
 ├── .gitignore
-├── GITHUB_METADATA.md
 ├── assets/
 │   ├── segment_horizontal.svg
 │   └── segment_vertical.svg
@@ -201,7 +199,7 @@ simulink-digital-watch/
 └── 
 ```
 
-## Engineering concepts demonstrated
+## Engineering concepts used
 
 - Boolean algebra and combinational logic
 - Sequential logic and edge-triggered D flip-flops
@@ -215,8 +213,6 @@ simulink-digital-watch/
 - Reusable digital subsystem design
 
 ## Limitations and possible next steps
-
-This is a behavioural/discrete-time simulation. Its Pulse Generator represents an ideal one-pulse-per-second timing source; it is not a physical quartz oscillator or a calibrated real-time clock. The model does not, by itself, account for oscillator tolerance, electrical noise, power consumption, battery behaviour, display-driver current, PCB layout, environmental effects, or hardware timing limits.
 
 Possible extensions include:
 
